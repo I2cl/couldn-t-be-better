@@ -7,7 +7,7 @@ require 'pry'
 
 
 def translate(text)
-  token = "8p0nhnfpQ7068z8WGXvqIpVwzu7q6xMsiT"
+  token = ENV["CODICTOKEN"]
 
   conn = Faraday.new(:url => "https://api.codic.jp") do |faraday|
     faraday.request  :url_encoded
